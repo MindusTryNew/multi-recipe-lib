@@ -1,5 +1,6 @@
 package multirecipe;
-
+import mindustry.type.ItemStack;
+import mindustry.type.LiquidStack;
 import arc.struct.Seq;
 import mindustry.type.Item;
 import mindustry.type.Liquid;
