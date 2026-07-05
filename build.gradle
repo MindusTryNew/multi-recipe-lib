@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'idea'
+}
+
+group = 'multirecipe'
+version = '0.1.0'
+
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
+
+repositories {
+    mavenCentral()
+
+    // Mindustry repository (für core + annotations)
+    maven { url 'https://www.jitpack.io' }
+}
+
+dependencies {
+    // Mindustry core (wichtig für Blocks, GenericCrafter etc.)
+    compileOnly "com.github.Anuken.Mindustry:core:v148"
+
+    // Falls du später Scripting/JSON Helpers nutzt
+    implementation "com.google.code.gson:gson:2.10.1"
+}
+
+jar {
+    archiveFileName = "multi-recipe-lib.jar"
+
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = "UTF-8"
+}
