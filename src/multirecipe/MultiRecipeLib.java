@@ -2,6 +2,7 @@ package multirecipe;
 
 import arc.util.Log;
 import mindustry.mod.Mod;
+import mindustry.content.Items;
 
 public class MultiRecipeLib extends Mod {
 
