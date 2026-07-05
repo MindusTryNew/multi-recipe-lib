@@ -1,0 +1,9 @@
+name: multi-recipe-lib
+displayName: Multi Recipe Lib
+author: Xtrophale
+version: 0.1.pre-beta
+minGameVersion: 148
+description: A Java library for Mindustry that adds support for multiple recipes in a single GenericCrafter-based block. Create advanced production blocks with automatic or manual recipe selection.
+main: multirecipe.MultiRecipeLib
+hidden: false
+java: true
